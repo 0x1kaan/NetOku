@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Primary SEO -->
+    <title>NetOku — Optik Form Analiz Aracı</title>
+    <meta name="description" content="Optik okuyucu çıktısını (.txt) saniyeler içinde analiz edin. Ders bazlı net hesaplama, kitapçık yönetimi ve Excel raporu." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://netoku.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://netoku.app/" />
+    <meta property="og:title" content="NetOku — Optik Form Analiz Aracı" />
+    <meta property="og:description" content="Optik okuyucu çıktısını (.txt) saniyeler içinde analiz edin. Ders bazlı net hesaplama, kitapçık yönetimi ve Excel raporu." />
+    <meta property="og:image" content="https://netoku.app/og-image.png" />
+    <meta property="og:locale" content="tr_TR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NetOku — Optik Form Analiz Aracı" />
+    <meta name="twitter:description" content="Optik okuyucu çıktısını (.txt) saniyeler içinde analiz edin." />
+    <meta name="twitter:image" content="https://netoku.app/og-image.png" />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#F5F1E8" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="application-name" content="NetOku" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- iOS / Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="NetOku" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Microsoft -->
+    <meta name="msapplication-TileColor" content="#F5F1E8" />
+    <meta name="msapplication-config" content="none" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "NetOku",
+        "description": "Optik okuyucu (OMR) çıktı dosyalarını saniyeler içinde analiz eden, ders bazlı net hesaplayıp Excel raporu üreten web uygulaması.",
+        "url": "https://netoku.app/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "tr-TR",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Ücretsiz",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pro",
+            "price": "19",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "19",
+              "priceCurrency": "USD",
+              "billingIncrement": 1,
+              "unitCode": "MON"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Okul",
+            "price": "99",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "99",
+              "priceCurrency": "USD",
+              "billingIncrement": 1,
+              "unitCode": "MON"
+            }
+          }
+        ],
+        "featureList": [
+          "OMR .txt dosyası analizi",
+          "Otomatik cevap anahtarı algılama",
+          "A/B/C/D kitapçık desteği",
+          "Ders bazlı net hesaplama",
+          "Excel rapor çıktısı",
+          "OBS uyumlu not aktarma"
+        ]
+      }
+    </script>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "NetOku",
+        "url": "https://netoku.app/",
+        "logo": "https://netoku.app/og-image.png",
+        "email": "destek@netoku.app"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

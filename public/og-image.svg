@@ -1,0 +1,48 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <!-- Subtle grid -->
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.05"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Logo icon -->
+  <rect x="80" y="80" width="72" height="72" rx="16" fill="#6366f1"/>
+  <text x="116" y="134" font-family="system-ui, sans-serif" font-size="42" font-weight="700" fill="white" text-anchor="middle">N</text>
+
+  <!-- Brand name -->
+  <text x="172" y="131" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="white">NetOku</text>
+
+  <!-- Main headline -->
+  <text x="80" y="260" font-family="system-ui, sans-serif" font-size="62" font-weight="700" fill="white">Optik Form Analizi</text>
+  <text x="80" y="340" font-family="system-ui, sans-serif" font-size="62" font-weight="700" fill="white">Saniyeler İçinde.</text>
+
+  <!-- Sub text -->
+  <text x="80" y="420" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8">.txt dosyasını yükle · Net hesapla · Excel indir</text>
+
+  <!-- Pill badges -->
+  <rect x="80" y="490" width="190" height="52" rx="26" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="175" y="522" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Ücretsiz Başla</text>
+
+  <rect x="290" y="490" width="210" height="52" rx="26" fill="#6366f1"/>
+  <text x="395" y="522" font-family="system-ui, sans-serif" font-size="22" fill="white" text-anchor="middle">Pro · $19/ay</text>
+
+  <!-- Right decoration: mock terminal -->
+  <rect x="720" y="160" width="420" height="320" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="720" y="160" width="420" height="44" rx="12" fill="#334155"/>
+  <circle cx="752" cy="182" r="8" fill="#ef4444" opacity="0.7"/>
+  <circle cx="780" cy="182" r="8" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="808" cy="182" r="8" fill="#22c55e" opacity="0.7"/>
+  <text x="750" y="234" font-family="monospace, mono" font-size="15" fill="#94a3b8">sinav.txt</text>
+  <text x="750" y="262" font-family="monospace, mono" font-size="14" fill="#e2e8f0">AHMET YILMAZ   A  ABCD...</text>
+  <text x="750" y="286" font-family="monospace, mono" font-size="14" fill="#e2e8f0">MEHMET DEMİR   B  DCBA...</text>
+  <text x="750" y="310" font-family="monospace, mono" font-size="14" fill="#6366f1">000000000000   A  ABCD... ← anahtar</text>
+  <line x1="750" y1="330" x2="1110" y2="330" stroke="#334155" stroke-width="1"/>
+  <text x="750" y="360" font-family="monospace, mono" font-size="14" fill="#22c55e">✓ 42 öğrenci · 3 ders · A/B kitapçık</text>
+  <text x="750" y="384" font-family="monospace, mono" font-size="14" fill="#22c55e">✓ Ortalama net: Matematik 28.4</text>
+  <text x="750" y="408" font-family="monospace, mono" font-size="14" fill="#94a3b8">→ analiz_raporu.xlsx hazır</text>
+  <text x="750" y="444" font-family="monospace, mono" font-size="13" fill="#64748b">netoku.app</text>
+</svg>

@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brutalist palette (shadcn-compat tokens pointing at brutalist values) */
+    --background: 40 40% 94%;           /* cream #F5F1E8 */
+    --foreground: 0 0% 4%;              /* ink #0A0A0A */
+    --card: 0 0% 100%;                  /* paper */
+    --card-foreground: 0 0% 4%;
+    --primary: 252 89% 67%;             /* purple #7C5FF5 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 40% 94%;
+    --secondary-foreground: 0 0% 4%;
+    --muted: 45 30% 89%;
+    --muted-foreground: 30 7% 36%;      /* ink muted #5A554E */
+    --accent: 50 100% 62%;              /* pop #FFD93D */
+    --accent-foreground: 0 0% 4%;
+    --destructive: 10 100% 59%;         /* red #FF4D2D */
+    --destructive-foreground: 0 0% 100%;
+    --success: 158 100% 33%;            /* green #00A76B */
+    --success-foreground: 0 0% 100%;
+    --border: 0 0% 4%;                  /* hard black 2px borders */
+    --input: 0 0% 4%;
+    --ring: 252 89% 67%;
+    --radius: 0rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    font-feature-settings: 'ss01' 1, 'ss02' 1, 'cv11' 1;
+    margin: 0;
+  }
+
+  /* Keyboard-visible focus ring. Brutalist: 3px black offset, no animation. */
+  :focus-visible {
+    outline: 3px solid #7C5FF5;
+    outline-offset: 2px;
+    border-radius: 0;
+  }
+
+  /* Remove focus ring for mouse clicks (keep for keyboard nav). */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Skip link: invisible until focused. */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 9999;
+    padding: 0.75rem 1rem;
+    background: #0A0A0A;
+    color: #FFFFFF;
+    font-weight: 700;
+    border: 2px solid #0A0A0A;
+    box-shadow: 3px 3px 0 0 #7C5FF5;
+  }
+  .skip-link:focus {
+    left: 0.5rem;
+    top: 0.5rem;
+  }
+
+  ::selection {
+    background: #FFD93D;
+    color: #0A0A0A;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F5F1E8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0A0A0A;
+    border: 2px solid #F5F1E8;
+  }
+
+  code, pre, kbd {
+    font-family: '"JetBrains Mono"', ui-monospace, monospace;
+  }
+}
+
+@layer components {
+  .brutal-border {
+    @apply border-2 border-ink;
+  }
+  .brutal-shadow {
+    box-shadow: 4px 4px 0 0 #0A0A0A;
+  }
+  .brutal-shadow-sm {
+    box-shadow: 2px 2px 0 0 #0A0A0A;
+  }
+  .brutal-shadow-lg {
+    box-shadow: 6px 6px 0 0 #0A0A0A;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-report-shell {
+    min-height: auto !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .print-report-sheet {
+    max-width: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

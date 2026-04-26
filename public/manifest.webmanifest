@@ -1,0 +1,44 @@
+{
+  "name": "NetOku — Optik Form Analiz Aracı",
+  "short_name": "NetOku",
+  "description": "Optik okuyucu çıktısını saniyeler içinde analiz edin. Ders bazlı net hesaplama, kitapçık yönetimi ve Excel raporu.",
+  "start_url": "/app",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F5F1E8",
+  "theme_color": "#F5F1E8",
+  "lang": "tr-TR",
+  "dir": "ltr",
+  "categories": ["education", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/og-image.png",
+      "type": "image/png",
+      "sizes": "1200x630",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Yeni Analiz",
+      "short_name": "Analiz",
+      "description": "Yeni bir optik form analizi başlat",
+      "url": "/app/analyze",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Geçmiş",
+      "short_name": "Geçmiş",
+      "description": "Önceki analizleri görüntüle",
+      "url": "/app/history",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    }
+  ]
+}
