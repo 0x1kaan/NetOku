@@ -46,7 +46,7 @@ jobs:
 
       - name: Tweet Agent çalıştır
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CHATGPT_API_TOKEN: ${{ secrets.CHATGPT_API_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           X_API_KEY: ${{ secrets.X_API_KEY }}

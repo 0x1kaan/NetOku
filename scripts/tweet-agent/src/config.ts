@@ -9,9 +9,9 @@ function required(name: string): string {
 export const config = {
   dryRun: process.env.DRY_RUN === "true",
 
-  anthropic: {
-    apiKey: required("ANTHROPIC_API_KEY"),
-    model: "claude-haiku-4-5-20251001",
+  openai: {
+    apiKey: required("CHATGPT_API_TOKEN"),
+    model: "gpt-4o-mini",
   },
 
   telegram: {

@@ -1,4 +1,4 @@
-import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 import { config, type ToneCategory } from "./config.js";
 import type { ProjectContext } from "./analyze.js";
 import { getPostedHistory } from "./state.js";
@@ -82,21 +82,23 @@ Sadece JSON dondur.`;
 export async function generateTweet(ctx: ProjectContext): Promise<GeneratedTweet> {
   const tone = pickTone();
   const history = await getPostedHistory();
-  const client = new Anthropic({ apiKey: config.anthropic.apiKey });
+  const client = new OpenAI({ apiKey: config.openai.apiKey });
 
-  const resp = await client.messages.create({
-    model: config.anthropic.model,
+  const resp = await client.chat.completions.create({
+    model: config.openai.model,
     max_tokens: 1024,
-    system: SYSTEM_PROMPT,
-    messages: [{ role: "user", content: buildUserPrompt(ctx, tone, history) }],
+    response_format: { type: "json_object" },
+    messages: [
+      { role: "system", content: SYSTEM_PROMPT },
+      { role: "user", content: buildUserPrompt(ctx, tone, history) },
+    ],
   });
 
-  const block = resp.content.find(b => b.type === "text");
-  if (!block || block.type !== "text") {
-    throw new Error("Claude'dan text response gelmedi");
+  const raw = resp.choices[0]?.message?.content?.trim() ?? "";
+  if (!raw) {
+    throw new Error("OpenAI'dan response gelmedi");
   }
 
-  const raw = block.text.trim();
   const jsonMatch = raw.match(/\{[\s\S]*\}/);
   if (!jsonMatch) {
     throw new Error(`JSON bulunamadi: ${raw}`);
