@@ -20,13 +20,24 @@ export async function postTweet(text: string): Promise<PostResult> {
     accessSecret: config.twitter.accessSecret,
   });
 
-  const me = await client.v2.me().catch(() => null);
+  // Önce kimlik doğrulamayı test et
+  const me = await client.v2.me().catch((err) => {
+    console.error("[Twitter] /me hatasi:", err?.data ?? err?.message ?? err);
+    return null;
+  });
   const username = me?.data?.username ?? "i";
+  console.log(`[Twitter] Kullanici: @${username}`);
 
-  const result = await client.v2.tweet(text);
-  const id = result.data.id;
-  return {
-    id,
-    url: `https://x.com/${username}/status/${id}`,
-  };
+  try {
+    const result = await client.v2.tweet(text);
+    const id = result.data.id;
+    return {
+      id,
+      url: `https://x.com/${username}/status/${id}`,
+    };
+  } catch (err: unknown) {
+    const e = err as { data?: unknown; code?: number; message?: string };
+    console.error("[Twitter] Tweet post detayi:", JSON.stringify(e?.data ?? e?.message ?? err, null, 2));
+    throw err;
+  }
 }
